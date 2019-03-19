@@ -23,7 +23,7 @@ body, html {
     .content {
       margin: auto 0;
       transform: rotate(270deg);
-      width: 440px;
+      width: 450px;
       .text {
         text-transform: uppercase;
         font-size: 22px;
@@ -37,6 +37,18 @@ body, html {
         width: 400px;
         .text {
           font-size: 18px;
+        }
+      }
+      @media (max-height: 600px) {
+        width: 400px;
+        .text {
+          font-size: 18px;
+        }
+      }
+      @media (max-height: 450px) {
+        width: 282px;
+        .text {
+          font-size: 14px;
         }
       }
       @media (max-width: 768px) {
@@ -54,16 +66,28 @@ body, html {
     }
 
     .about {
-      margin-bottom: 20px;
-      margin-top: 20px;
-      width: 30px;
-      height: 26px;
-      background: url(../img/portfolio.png) center center no-repeat;
-      background-size: contain;
+      margin: 20px;
+      width: 36px;
+      color: #b2b2b2;
       cursor: pointer;
-      @media (max-width: 960px) {
+      &:hover {
+        color: #838383;
+        
+      }
+      @media (max-height: 600px) {
+        width: 26px;
+        height: 30px;
+        
+      }
+      @media (max-height: 450px) {
         width: 20px;
-        height: 16px;
+      }
+      @media (max-width: 960px) {
+        width: 26px;
+      }
+      @media (max-width: 768px) {
+        width: 20px;
+        
       }
     }
 
@@ -75,7 +99,7 @@ body, html {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 10vh;
+    padding: 8vh;
     background: url(../img/blow-2.png) center center no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
@@ -89,10 +113,8 @@ body, html {
     
 
     &_header {
-      // display: flex;
       justify-content: space-between;
       align-items: baseline;
-      // flex-wrap: nowrap;
       width: 100%;
 
       @media (max-width: 960px) {
@@ -189,6 +211,10 @@ body, html {
       background-color: #000;
       color: #f0cdab;
       cursor: pointer;
+      &:hover {
+        color: #fff;
+        
+      }
 
       @media (max-width: 960px) {
         width: 250px;
@@ -207,6 +233,7 @@ body, html {
         height: 35px;
         font-size: 14px;
       }
+      
     }
   }
 }
